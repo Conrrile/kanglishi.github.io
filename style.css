@@ -216,6 +216,66 @@ nav ul li a:hover {
     font-size: 1.1em;
 }
 
+/* 新增社交媒体链接样式 */
+.social-links {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.social-links h3 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* 允许链接换行 */
+    justify-content: center;
+    gap: 20px; /* 链接之间的间距 */
+}
+
+.social-links ul li {
+    margin: 0; /* 移除默认的列表项边距 */
+}
+
+.social-links ul li a {
+    display: flex; /* 让图标和文字在同一行垂直居中 */
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    color: #555;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.social-links ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #007bff;
+}
+
+.social-links ul li a .fab,
+.social-links ul li a .fas {
+    font-size: 1.5em; /* 图标大小 */
+    margin-right: 10px; /* 图标与文字间距 */
+    color: #007bff; /* 图标默认颜色 */
+    transition: color 0.3s ease;
+}
+
+.social-links ul li a:hover .fab,
+.social-links ul li a:hover .fas {
+    color: #fff; /* 鼠标悬停时图标颜色变白 */
+}
+
 /* 页脚 */
 footer {
     background: #333;
@@ -273,5 +333,19 @@ footer {
     }
     .hero-content p {
         font-size: 1em;
+    }
+
+    .social-links ul {
+        flex-direction: column; /* 小屏幕上垂直排列 */
+        align-items: center;
+    }
+
+    .social-links ul li {
+        width: 100%; /* 链接占据整行 */
+        text-align: center;
+    }
+
+    .social-links ul li a {
+        justify-content: center; /* 内部内容居中 */
     }
 }
